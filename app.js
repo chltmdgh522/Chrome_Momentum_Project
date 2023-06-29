@@ -1,12 +1,33 @@
 const loginForm=document.querySelector("#login-form");
-
-
-
 const loginInput=document.querySelector("#login-form input");
+const greeting=document.querySelector("#greeting");
 
-function onLoginSubmit(){
+const HIDDEN_CLASSNAME="hidden";
+const USERNAME_KEY="username";
+
+function onLoginSubmit(evnet){
+  event.preventDefault();
     const username=loginInput.value;
-  console.log(username);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    console.log(username);
+    //greeting.innerText="Hello" + username;
+    localStorage.setItem(USERNAME_KEY,username);
+    paintGreetings(username);
+
+  }
+  
+function paintGreetings(username){
+  greeting.innerText=`Hello ${savedUsername}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-loginForm.addEventListener("submit",onLoginSubmit);
+const savedUsername=localStorage.getItem(USERNAME_KEY);
+
+if(savedUsername==null){
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit",onLoginSubmit);
+}else{
+  paintGreetings(savedUsername);
+}
+
+console.log(savedUsername);
