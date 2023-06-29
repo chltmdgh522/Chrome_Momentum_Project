@@ -13,11 +13,10 @@ function onLoginSubmit(evnet){
     //greeting.innerText="Hello" + username;
     localStorage.setItem(USERNAME_KEY,username);
     paintGreetings(username);
-
   }
   
 function paintGreetings(username){
-  greeting.innerText=`Hello ${savedUsername}`;
+  greeting.innerText=`Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
