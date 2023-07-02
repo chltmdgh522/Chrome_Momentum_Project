@@ -5,7 +5,7 @@ const greeting=document.querySelector("#greeting");
 const HIDDEN_CLASSNAME="hidden";
 const USERNAME_KEY="username";
 
-function onLoginSubmit(evnet){
+function onLoginSubmit(event){
   event.preventDefault();
     const username=loginInput.value;
     loginForm.classList.add(HIDDEN_CLASSNAME);
@@ -16,7 +16,7 @@ function onLoginSubmit(evnet){
   }
   
 function paintGreetings(username){
-  greeting.innerText=`Hello ${username}`;
+  greeting.innerText=`안녕하세요 ${username}님 오늘도 파이팅 해봅시다!`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

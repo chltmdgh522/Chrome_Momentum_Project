@@ -1,5 +1,5 @@
 const images=[
-    "일본.webp","중국.jpg","한국.jpeg"
+    "img01.jpg","img02.jpg","img03.jpg","img04.jpg","img05.jpg"
 ];
 
 const chosenImage=images[Math.floor(Math.random()*images.length)];
