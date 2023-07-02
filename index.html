@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/img06.png" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum App</title>
   </head>
   <body>
+    <form id="emoticon">
+      <div class="">
+        <i class="fas fa-info-circle hidden"></i>
+        <span>공지사항 클릭해주세요!</span>
+      </div>
+      <span class="hidden" id="noticespan"
+        >1. JS와 API를 섞은 작품이다.<br />
+        2. 현 거주지 날씨 및 시간이 지원된다.<br />
+        3. 급하게 만들어서 별로 안 이쁘다...<br />
+        4. 한번 클릭하면 없어집니다.<br />
+        5. 피드백 좀 주세요!! <br />
+      </span>
+    </form>
     <form id="login-form" class="hidden">
       <input
         required
@@ -16,18 +30,21 @@
       />
       <input type="submit" value="LOG" />
     </form>
-    <h2 id="clock">00:00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
+    <h2 id="clock">00:00:00</h2>
     <form id="todo-form">
-      <input type="text" placeholder="오늘 할거 입력해주세요!" />
+      <input type="text" placeholder="할 일을 입력해주세요!" required />
     </form>
-    <ul id="todo-list"></ul>
+    <div class="todo-div">
+      <span class="todo-span">TODAY LIST</span>
+      <ul id="todo-list"></ul>
+    </div>
     <div id="quote">
       <span></span>
       <span></span>
     </div>
     <div id="weather">
-      <span></span>
+      <span></span><br />
       <span></span>
     </div>
     <div class="background_cover"></div>
@@ -37,5 +54,10 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/notice.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -11,9 +11,9 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
-      weather.innerText=`${data.weather[0].main} / ${data.main.temp}`;
+      const weather = document.querySelector("#weather span:last-child");
+      const city = document.querySelector("#weather span:first-child");
+      weather.innerText=`${data.main.temp} ${data.weather[0].main} `;
       city.innerText = data.name;
     });
 }
@@ -21,4 +21,4 @@ function onGeoOk(position) {
 function onGeoError() {
   alert("위치를 찾을 수 없습니다.");
 }
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+//navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

@@ -27,7 +27,6 @@ function paintToDo(newTodoObj){
     li.appendChild(span);
     li.appendChild(button);
     span.innerText=newTodoObj.text;
-    
     toDoList.append(li);
 }
 
