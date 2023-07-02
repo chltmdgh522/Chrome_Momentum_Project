@@ -21,4 +21,4 @@ function onGeoOk(position) {
 function onGeoError() {
   alert("위치를 찾을 수 없습니다.");
 }
-//navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
