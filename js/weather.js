@@ -17,7 +17,6 @@ function onGeoOk(position) {
       city.innerText = data.name;
     });
 }
-
 function onGeoError() {
   alert("위치를 찾을 수 없습니다.");
 }
